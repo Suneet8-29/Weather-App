@@ -4,15 +4,39 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src='/js/app.js'></script>
+
 </head>
 
 <body>
-    {{>header}}
+    <div id="container">
+        {{>header}}
+        <br>
+        <br>
+        <br>
 
-    <p>This is landing page</p>
-    <hr />
+
+        <fieldset>
+            <legend>{{title}}</legend>
+            <div>
+                <p>Get your forecast details for the day !</p>
+                <form>
+                    <input id="searchText" type="text" placeholder="  Location">
+                    <input id="btnSearch" type="submit" value="SEARCH">
+                </form>
+
+            </div>
+            <br>
+            <div>
+                <p id='dataLocation'></p>
+                <p id='dataForecast'></p>
+            </div>
+
+        </fieldset>
+
+    </div>
+
     {{>footer}}
+    <script src='/js/app.js'></script>
 </body>
 
 </html>
