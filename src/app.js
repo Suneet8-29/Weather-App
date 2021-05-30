@@ -17,14 +17,13 @@ app.use(express.static(htmlPath)); // Using a staic path to load data into brows
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialPath);
-
+//handle get request
 app.get('', (req, res) => {
 
     res.render('index', {
         title: 'Weather',
         name: 'Suneet'
     });
-
 })
 
 app.get('/about', (req, res) => {
